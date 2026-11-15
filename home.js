@@ -352,3 +352,18 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 })();
 
+
+/* If a sample photo fails to load (patchy mobile signal), try again rather than showing a broken image. */
+(function retryImages() {
+  Array.prototype.forEach.call(document.querySelectorAll('img[src*="assets/demo/"], img[src*="assets/screens/"]'), function (img) {
+    var tries = 0;
+    function retry() {
+      if (tries >= 3) return;
+      tries += 1;
+      var base = img.getAttribute('src').split('?')[0];
+      setTimeout(function () { img.src = base + '?r=' + tries; }, 800 * tries);
+    }
+    img.addEventListener('error', retry);
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute('loading') !== 'lazy') retry();
+  });
+})();

@@ -697,3 +697,5 @@ button.m-tab.tab-btn:focus-visible { outline: 3px solid var(--deep); outline-off
 .try-links { text-align: center; margin: .25rem 0 0; display: flex; gap: .5rem; justify-content: center; align-items: center; }
 .try-links button:disabled { opacity: .45; cursor: default; }
 @media (max-width: 959px) { .try-copy > .try-links { order: 7; } .try-copy > .try-note { margin-top: .75rem; } }
+/* A photo that hasn't loaded yet shows the plain card colour, never broken-image text */
+.sw-card img, .roll-track img, .albums img { color: transparent; }
