@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Siftory – sort your photos and videos with a swipe</title>
+<meta name="description" content="Siftory is a calm, quick way to sort your Android camera roll. Swipe to keep, trash, favourite or save for later. Nothing is deleted until you confirm, and everything stays on your phone.">
+<link rel="canonical" href="https://siftoryapp.com/">
+<meta name="theme-color" content="#174B3A">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Siftory">
+<meta property="og:title" content="Siftory – sort your photos and videos with a swipe">
+<meta property="og:description" content="Swipe through your camera roll one item at a time. Review before anything is deleted. No account, no cloud, no servers.">
+<meta property="og:url" content="https://siftoryapp.com/">
+<meta property="og:image" content="https://siftoryapp.com/assets/feature-graphic.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="Siftory: sort your camera roll with a swipe. Up to Keep, down to Trash, left for Later, right for Favourite.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://siftoryapp.com/assets/feature-graphic.png">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="styles.css?v=15">
+<script src="home.js?v=7" defer></script>
+</head>
+<body class="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Siftory home"><img src="assets/icon-192.png" alt="" width="36" height="36">Siftory</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li class="nav-optional"><a href="index.html#how">How it works</a></li>
+        <li class="nav-optional"><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li class="nav-cta nav-wide"><a href="index.html#beta">Join the beta</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <ul class="pills" aria-label="At a glance">
+          <li class="p-keep">Android</li>
+          <li class="p-later">No account</li>
+          <li class="p-fav">No cloud</li>
+          <li class="p-sift">£4.99 once</li>
+        </ul>
+        <div class="hero-split">
+          <h1 id="hero-title"><span class="l1">Swipe your</span> <span class="l1">camera roll</span> <span class="l1">into <span class="hl">shape.</span></span></h1>
+          <img class="hero-shot" src="assets/screens/app-sift.webp" width="804" height="1572" alt="The Siftory Sift screen: a photo with Keep, Trash, Later and Favourite tabs around it">
+        </div>
+        <p class="lead">Up to keep, down to Trash, left for later, right for a favourite. Siftory sorts your photos and videos into real albums on your phone, and nothing is deleted until you say so.</p>
+        <div class="hero-actions">
+          <a class="btn btn-play" href="#beta">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg>
+            <span><small>Coming soon to</small><strong>Google Play</strong></span>
+          </a>
+          <a class="btn btn-ghost" href="#try">Try the swipe</a>
+        </div>
+        <p class="reassure">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          Free to try. Nothing is deleted until you confirm.
+        </p>
+      </div>
+
+      <div class="hero-stage" data-hero-demo>
+        <div class="compass" aria-hidden="true"></div>
+        <span class="tally-chip" data-dir="up" aria-hidden="true">↑ Keep <b data-count="up">5</b></span>
+        <span class="tally-chip" data-dir="right" aria-hidden="true">Favourite <b data-count="right">2</b></span>
+        <span class="tally-chip" data-dir="down" aria-hidden="true">↓ Trash <b data-count="down">4</b></span>
+        <span class="tally-chip" data-dir="left" aria-hidden="true">Later <b data-count="left">1</b></span>
+
+        <div class="phone demo-phone" role="img" aria-label="Animated example of the Siftory Sift screen: photos are swiped up to Keep, down to Trash, left to Later and right to Favourite, and a counter adds up how many have been sorted.">
+          <div class="m-top" aria-hidden="true"><span style="background:var(--card)">‹ Leave</span><span style="background:var(--card)">Review</span></div>
+          <div class="m-progress" aria-hidden="true"><i data-progress style="width:24%"></i></div>
+          <div class="m-stage" aria-hidden="true">
+            <span class="m-tab t-keep" data-dir="up">↑ Keep</span>
+            <div class="m-mid">
+              <span class="m-tab v l t-later" data-dir="left">← Later</span>
+              <div class="deck" data-deck>
+                <figure class="sw-card" data-pos="0"><img src="assets/demo/photo-1.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                <figure class="sw-card" data-pos="1"><img src="assets/demo/photo-3.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                <figure class="sw-card" data-pos="2"><img src="assets/demo/photo-6.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-2.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-5.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-4.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-8.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-7.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+              </div>
+              <span class="m-tab v t-fav" data-dir="right">Fav →</span>
+            </div>
+            <span class="m-tab t-trash" data-dir="down">↓ Trash</span>
+          </div>
+          <div class="m-count" aria-hidden="true"><span><span data-sorted>12</span> sorted</span><span class="tr"><span data-trashed>4</span> to Trash</span></div>
+        </div>
+        <button type="button" class="anim-toggle js-only" data-toggle-hero aria-pressed="false">Pause animation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="band" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="how-title">How it works</h2>
+        <p>A few minutes here and there is all it takes. Stop whenever you like and pick up where you left off.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Pick what to sift</h3>
+          <p>Your unsorted photos and videos, one or more Collections, or a phone album such as Screenshots or WhatsApp.</p>
+        </li>
+        <li>
+          <h3>Swipe, one at a time</h3>
+          <p>Each swipe is a decision, and any decision can be undone. Prefer tapping? Tap the tabs instead.</p>
+          <ul class="dir-list" aria-label="Swipe directions">
+            <li data-dir="up">↑ Keep</li>
+            <li data-dir="down">↓ Trash</li>
+            <li data-dir="left">← Later</li>
+            <li data-dir="right">→ Favourite</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Review, then confirm</h3>
+          <p>See every decision in one place and change anything you like. Your phone only changes when you tap Complete.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Try it -->
+  <section id="try" aria-labelledby="try-title">
+    <div class="wrap try">
+      <div class="try-copy">
+        <div class="section-head" style="margin-bottom:0">
+          <h2 id="try-title">Have a go</h2>
+          <p class="js-only">Drag the photo in any direction, use the buttons, or press the arrow keys. These are sample pictures, so nothing here touches your own photos.</p>
+          <p class="no-js-only">Turn on JavaScript to try sorting these sample photos yourself.</p>
+        </div>
+        <ul class="tally" aria-label="Your sample sort so far">
+          <li data-dir="up"><b data-try-count="up">0</b>Keep</li>
+          <li data-dir="down"><b data-try-count="down">0</b>Trash</li>
+          <li data-dir="left"><b data-try-count="left">0</b>Later</li>
+          <li data-dir="right"><b data-try-count="right">0</b>Favourite</li>
+        </ul>
+        <p class="tally-total"><span data-try-done>0</span> of 8 sample photos sorted</p>
+        <div class="dpad js-only" role="group" aria-label="Sort the current photo">
+          <button type="button" data-dir="up" data-try-btn="up">↑ Keep</button>
+          <button type="button" data-dir="left" data-try-btn="left">← Later</button>
+          <button type="button" class="undo" data-try-undo disabled>Undo</button>
+          <button type="button" data-dir="right" data-try-btn="right">Favourite →</button>
+          <button type="button" data-dir="down" data-try-btn="down">↓ Trash</button>
+        </div>
+        <p class="try-note js-only">In the app, Trash is only a pile until you review it. <button type="button" class="try-reset" data-try-reset>Start again</button></p>
+        <p class="visually-hidden" aria-live="polite" data-try-live></p>
+      </div>
+
+      <div class="try-stage">
+        <span class="m-tab t-keep" data-dir="up">↑ Keep</span>
+        <div class="m-mid">
+          <span class="m-tab v l t-later" data-dir="left">← Later</span>
+          <div class="deck try-deck" data-try-deck tabindex="0" role="group" aria-roledescription="photo card" aria-label="Sample photo to sort. Use the arrow keys: up to Keep, down to Trash, left for Later, right for Favourite.">
+            <figure class="sw-card" data-pos="0"><img src="assets/demo/photo-4.webp" alt="Sample photo: a pine forest" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+            <figure class="sw-card" data-pos="1"><img src="assets/demo/photo-1.webp" alt="Sample photo: a sandy beach" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+            <figure class="sw-card" data-pos="2"><img src="assets/demo/photo-2.webp" alt="Sample photo: a sunset over hills" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+            <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-8.webp" alt="Sample photo: the same sunset again" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+            <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-3.webp" alt="Sample photo: a snowy mountain" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+            <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-6.webp" alt="Sample photo: a wildflower meadow" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+            <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-5.webp" alt="Sample photo: a lake below a hill" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+            <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-7.webp" alt="Sample photo: rolling green hills" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+            <div class="try-done" data-try-end hidden>
+              <strong>All 8 sorted.</strong>
+              <p>That’s the whole idea. Your own camera roll works the same way, a few minutes at a time.</p>
+              <p><button type="button" class="btn btn-play btn-small" data-try-again>Sort them again</button></p>
+            </div>
+          </div>
+          <span class="m-tab v t-fav" data-dir="right">Fav →</span>
+        </div>
+        <span class="m-tab t-trash" data-dir="down">↓ Trash</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section id="features" aria-labelledby="coll-title">
+    <div class="wrap split">
+      <div>
+        <span class="kicker">Organise, not just delete</span>
+        <h2 id="coll-title">Collections become real albums on your phone</h2>
+        <p class="section-intro" style="margin-bottom:0">Make Collections for the things that matter to you, such as Holidays, Garden or Days out, and send photos to them as you swipe.</p>
+        <ul class="ticks">
+          <li>Hold, then swipe up to drop a photo into one of up to four Keep Collections.</li>
+          <li>Link a Collection to a phone album and it appears in your Gallery app, like any other album.</li>
+          <li>Link all of your Collections, or only the ones you choose.</li>
+        </ul>
+      </div>
+      <div class="albums" role="img" aria-label="Example Collections screen: Holidays, Garden, Days out and Sunsets, each shown as a phone album.">
+        <div class="albums-head" aria-hidden="true"><b>Collections</b><span>4 Collections</span></div>
+        <ul aria-hidden="true">
+          <li><img src="assets/demo/photo-1.webp" alt="" width="600" height="800" decoding="async"><div class="meta"><b>Holidays</b><small>235 items</small><br><span class="linked">Phone album</span></div></li>
+          <li><img src="assets/demo/photo-6.webp" alt="" width="600" height="800" decoding="async"><div class="meta"><b>Garden</b><small>114 items</small><br><span class="linked">Phone album</span></div></li>
+          <li><img src="assets/demo/photo-3.webp" alt="" width="600" height="800" decoding="async"><div class="meta"><b>Days out</b><small>88 items</small><br><span class="linked">Phone album</span></div></li>
+          <li><img src="assets/demo/photo-2.webp" alt="" width="600" height="800" decoding="async"><div class="meta"><b>Sunsets</b><small>52 items</small><br><span class="linked">Phone album</span></div></li>
+        </ul>
+        <p class="albums-foot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Linked albums show up in your Gallery app too.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Roll -->
+  <section aria-labelledby="roll-title">
+    <div class="wrap split flip">
+      <div>
+        <span class="kicker">A calmer camera roll</span>
+        <h2 id="roll-title">Media Roll: your camera roll, but quicker</h2>
+        <p class="section-intro" style="margin-bottom:0">Browse newest first, just like your Gallery, and tidy up as you go.</p>
+        <ul class="ticks">
+          <li>Swipe left and right to browse.</li>
+          <li>Swipe up, or tap, to send a photo to the Collection you choose, such as “Holidays”.</li>
+          <li>Swipe down for Trash, with Undo for a few seconds.</li>
+          <li>Pinch or double-tap to zoom. Tap Done to review what you trashed.</li>
+        </ul>
+      </div>
+      <div class="roll-wrap" data-roll>
+        <div class="phone dark roll-phone" role="img" aria-label="Animated example of Media Roll: full-screen photos slide past one after another, with Holidays above and Trash below.">
+          <div class="m-top" aria-hidden="true"><span>Done</span><span>54 of 2039</span><span>Buttons</span></div>
+          <span class="m-pill" aria-hidden="true">Swipe up to: Holidays ▾</span>
+          <div class="m-stage" aria-hidden="true">
+            <span class="m-tab t-keep">Holidays</span>
+            <div class="m-mid">
+              <span class="m-tab v t-browse">←</span>
+              <div class="roll-view">
+                <div class="roll-track">
+                  <img src="assets/demo/photo-5.webp" alt="" width="600" height="800" decoding="async">
+                  <img src="assets/demo/photo-2.webp" alt="" width="600" height="800" decoding="async">
+                  <img src="assets/demo/photo-4.webp" alt="" width="600" height="800" decoding="async">
+                  <img src="assets/demo/photo-1.webp" alt="" width="600" height="800" decoding="async">
+                  <img src="assets/demo/photo-7.webp" alt="" width="600" height="800" decoding="async">
+                  <img src="assets/demo/photo-3.webp" alt="" width="600" height="800" decoding="async">
+                  <img src="assets/demo/photo-6.webp" alt="" width="600" height="800" decoding="async">
+                  <img src="assets/demo/photo-8.webp" alt="" width="600" height="800" decoding="async">
+                  <img src="assets/demo/photo-5.webp" alt="" width="600" height="800" decoding="async">
+                </div>
+              </div>
+              <span class="m-tab v t-browse">→</span>
+            </div>
+            <span class="m-tab t-trash">Trash</span>
+          </div>
+        </div>
+        <button type="button" class="anim-toggle js-only" data-toggle-roll aria-pressed="false">Pause animation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nothing deleted until you confirm -->
+  <section class="safe" aria-labelledby="safe-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">You stay in control</span>
+        <h2 id="safe-title">Nothing is deleted until you say so</h2>
+        <p>Swiping down doesn’t delete anything. It puts the photo in a pile you can look through, change your mind about, and only clear when you’re ready.</p>
+      </div>
+      <div class="safety">
+        <ol class="flow">
+          <li><h3>Swipe down</h3><p>The photo goes into Siftory’s Trash. It’s still on your phone, untouched.</p></li>
+          <li><h3>Review</h3><p>See everything you’ve trashed in one place. Move anything back with a tap.</p></li>
+          <li><h3>Complete</h3><p>You confirm, then Android asks you to allow the change as well.</p></li>
+          <li><h3>Recycle bin, for 30 days</h3><p>Deleted items go to your phone’s Recycle bin, where Android normally keeps them for around 30 days, so you can still restore them.</p></li>
+        </ol>
+        <div class="dialog-mock" role="img" aria-label="Example of the confirmation Siftory shows before deleting: Complete this Sift? 24 items are in Trash. Deleting moves them to your phone’s Recycle bin, where you can restore them for 30 days.">
+          <div aria-hidden="true">
+            <b>Complete this Sift?</b>
+            <p>Keep your 27 decisions and finish this Sift.</p>
+            <p>24 items are in Trash. Deleting moves them to your phone’s Recycle bin, where you can restore them for 30 days. Android will ask you to allow it.</p>
+            <span class="d-btn d-danger">Complete and delete 24 from phone</span>
+            <span class="d-btn d-plain">Complete, keep them in Trash</span>
+            <span class="d-btn d-plain">Cancel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="band" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="privacy-title">Your photos stay on your phone</h2>
+        <p>Siftory works entirely on your device. There’s nothing to sign up to and nowhere for your photos to go.</p>
+      </div>
+      <ul class="facts">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/><path d="M3 3l18 18"/></svg>
+          <h3>No account</h3>
+          <p>Open the app and start sorting. No email, no password, no sign-in.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 15l2-6 2 6M7.7 13h2.6M14 9v6h1.5a3 3 0 0 0 0-6z"/><path d="M3 3l18 18"/></svg>
+          <h3>No ads</h3>
+          <p>No adverts and no ad tracking, in the free version or the paid one.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 0 1-.6-10A6 6 0 0 1 18 9a4.5 4.5 0 0 1 .5 9"/><path d="M3 3l18 18"/></svg>
+          <h3>No uploads</h3>
+          <p>Nothing goes to the cloud. Siftory has no servers that store your photos or videos.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/><path d="M9.5 10l2 2 3.5-3.5"/></svg>
+          <h3>On your device</h3>
+          <p>Your decisions and Collections are saved on your phone too.</p>
+        </li>
+      </ul>
+      <p class="facts-more"><a href="privacy.html">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <!-- Screenshot gallery -->
+  <section id="screens" aria-labelledby="screens-title">
+    <div class="wrap gallery-top">
+      <div class="section-head">
+        <h2 id="screens-title">See every screen</h2>
+        <p>The same screenshots you’ll find on Google Play.</p>
+      </div>
+      <div class="gallery-controls js-only">
+        <button type="button" data-gallery-prev aria-label="Previous screenshots" aria-controls="gallery">‹</button>
+        <button type="button" data-gallery-next aria-label="Next screenshots" aria-controls="gallery">›</button>
+      </div>
+    </div>
+    <ul class="gallery" id="gallery" tabindex="0" aria-label="App screenshots, scroll sideways for more">
+      <li><img src="assets/screens/store-1.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="Swipe to sort. Up to keep, down to Trash. The Sift screen with a photo in the middle, Keep above, Trash below, Later on the left and Favourite on the right."></li>
+      <li><img src="assets/screens/store-2.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="Media Roll: tidy your camera roll as you scroll. A full-screen photo with Keep above and Trash below."></li>
+      <li><img src="assets/screens/store-3.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="Set up a Sift your way, and save it. Choose how to sift, what to sift, then start."></li>
+      <li><img src="assets/screens/store-4.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="Collections that become real phone albums. A grid of Collections such as Holidays, Food, Nature and Garden."></li>
+      <li><img src="assets/screens/store-5.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="Send photos straight to a Collection. A list of Collections to choose from, with an option to create a new one."></li>
+      <li><img src="assets/screens/store-6.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="Nothing is deleted until you say so. The Complete this Sift confirmation, explaining that deleted items go to the phone’s Recycle bin."></li>
+      <li><img src="assets/screens/store-7.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="No account. No uploads. Everything stays on your phone. The Siftory home screen with Media Roll, Sift and Collections."></li>
+    </ul>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" aria-labelledby="pricing-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="pricing-title">Free to start. One payment if you want more.</h2>
+        <p>Try everything for free. If Siftory earns a place on your phone, unlock it for good.</p>
+      </div>
+      <div class="plans">
+        <article class="plan" aria-labelledby="plan-free">
+          <h3 id="plan-free">Free</h3>
+          <p class="price">£0</p>
+          <ul class="ticks">
+            <li>100 decisions to get you started</li>
+            <li>30 more decisions every month</li>
+            <li>Up to 5 Collections</li>
+            <li>No account, no ads, nothing uploaded</li>
+          </ul>
+          <p class="plan-foot">Free when Siftory launches on Google Play.</p>
+        </article>
+        <article class="plan plan-life" aria-labelledby="plan-life">
+          <h3 id="plan-life">Siftory Lifetime</h3>
+          <p class="price">£4.99 <small>one-off payment</small></p>
+          <ul class="ticks">
+            <li>Unlimited sifting</li>
+            <li>Unlimited Collections</li>
+            <li>Pay once and keep it. No renewals.</li>
+          </ul>
+          <p class="plan-foot">Coming with launch on Google Play.</p>
+        </article>
+      </div>
+      <p class="plans-note">No subscription, no weekly plans and no free trial that turns into a bill.</p>
+    </div>
+  </section>
+
+  <!-- Pre-launch -->
+  <section id="beta" aria-labelledby="beta-title">
+    <div class="wrap">
+      <h2 id="beta-title" class="visually-hidden">Who makes Siftory</h2>
+      <div class="proof">
+        <div class="uk">
+          <h3>Built in the UK by an independent developer</h3>
+          <p>Siftory is designed and built in the UK by an independent developer. Questions and feedback sent to <a href="mailto:info@siftoryapp.com">info@siftoryapp.com</a> go straight to the developer.</p>
+        </div>
+        <div class="test">
+          <h3>Now in closed testing</h3>
+          <p>Siftory is being tested on real phones ahead of its Google Play launch. Want to try it early? Join the beta and we’ll send you an invite.</p>
+          <a class="btn btn-play" href="mailto:info@siftoryapp.com?subject=Siftory%20beta"><span><strong>Join the beta</strong></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq faq-home">
+      <h2 id="faq-title">Questions</h2>
+      <details>
+        <summary>Is anything deleted straight away?</summary>
+        <div class="answer"><p>No. Swiping down only puts an item in Siftory’s Trash. Nothing on your phone changes until you review your decisions and tap Complete, and Android asks you to allow the change too.</p></div>
+      </details>
+      <details>
+        <summary>Where do deleted photos go, and can I get them back?</summary>
+        <div class="answer"><p>They go to your phone’s Recycle bin (on Android 11 and later), where Android normally keeps them for around 30 days. Restore them from Trash › Recently deleted in Siftory, or from the Recycle bin in your Gallery app.</p></div>
+      </details>
+      <details>
+        <summary>What does Later do?</summary>
+        <div class="answer"><p>Later is for photos you’re not sure about yet. Nothing happens to them, and you can come back to them another time.</p></div>
+      </details>
+      <details>
+        <summary>Are Collections real albums?</summary>
+        <div class="answer"><p>They can be. Link a Collection to a phone album and, when you complete a Sift, its photos are put into that album, so you’ll see it in your Gallery app. Collections you don’t link stay inside Siftory.</p></div>
+      </details>
+      <details>
+        <summary>Are my photos uploaded? Do I need an account?</summary>
+        <div class="answer"><p>No and no. Everything happens on your phone, there’s no account to create, and Siftory has no servers that store your photos or videos. The <a href="privacy.html">privacy policy</a> has the details.</p></div>
+      </details>
+      <details>
+        <summary>What’s free, and what does Lifetime unlock?</summary>
+        <div class="answer"><p>The free version gives you 100 decisions to start, 30 more each month and up to 5 Collections. Siftory Lifetime is a one-off £4.99 payment for unlimited sifting and unlimited Collections. It will be available when Siftory launches on Google Play.</p></div>
+      </details>
+      <details>
+        <summary>Will there be a subscription?</summary>
+        <div class="answer"><p>No. Lifetime is a single payment, not a subscription.</p></div>
+      </details>
+      <details>
+        <summary>Is there an iPhone version?</summary>
+        <div class="answer"><p>Not at the moment. Siftory is for Android phones.</p></div>
+      </details>
+      <p class="faq-more">More answers, and a guide to every screen, on the <a href="support.html">support page</a>.</p>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="band final" aria-labelledby="cta-title">
+    <div class="wrap">
+      <ul class="dir-list" aria-hidden="true">
+        <li data-dir="up">↑ Keep</li>
+        <li data-dir="down">↓ Trash</li>
+        <li data-dir="left">← Later</li>
+        <li data-dir="right">→ Favourite</li>
+      </ul>
+      <h2 id="cta-title">Start with last month’s photos</h2>
+      <p>A few minutes is enough to see the difference. Siftory is coming soon to Google Play, and you can try it now in the beta.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="mailto:info@siftoryapp.com?subject=Siftory%20beta">Join the beta</a>
+        <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="support.html">Read the guide</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/icon-192.png" alt="" width="32" height="32">Siftory</a>
+      <p class="footer-tagline">Swipe your camera roll into shape.</p>
+      <p>Questions? Email <a href="mailto:info@siftoryapp.com">info@siftoryapp.com</a></p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="mailto:info@siftoryapp.com">Contact</a></li>
+      </ul>
+      <p class="footer-meta">Made in the UK. © 2026 Siftory</p>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
