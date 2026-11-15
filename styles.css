@@ -656,3 +656,4 @@ section[aria-labelledby="roll-title"] .kicker { background: var(--fav-bg); color
   .hero h1 { font-size: 8.85vw; text-wrap: wrap; letter-spacing: -.04em; line-height: 1.04; }
   .hero h1 .l1 { display: block; white-space: nowrap; }
 }
+@media (max-width: 959px) { .hero h1 .l1 { width: max-content; } }
