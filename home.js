@@ -334,5 +334,22 @@
   }
   fit();
   window.addEventListener('resize', fit);
+  window.addEventListener('siftory:refit', fit);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();
+
+/* Preview layout: the app screenshot matches the height of the three headline lines. */
+(function matchShot() {
+  var shot = document.querySelector('.hero-shot');
+  var h1 = document.getElementById('hero-title');
+  if (!shot || !h1) return;
+  function size() {
+    for (var i = 0; i < 3; i++) {
+      shot.style.height = h1.offsetHeight + 'px';
+      window.dispatchEvent(new Event('siftory:refit'));
+    }
+  }
+  if (shot.complete) size(); else shot.addEventListener('load', size);
+  window.addEventListener('resize', size);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(size);
 })();

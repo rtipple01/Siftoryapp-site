@@ -666,3 +666,4 @@ section[aria-labelledby="roll-title"] .kicker { background: var(--fav-bg); color
 @media (min-width: 960px) { .hero-shot { display: none; } .hero-split { display: block; } }
 .btn-play strong, .btn-play small { white-space: nowrap; }
 @media (max-width: 380px) { .btn-play strong { font-size: 1rem; } .btn-play svg { width: 22px; height: 22px; } .hero-actions .btn { padding-inline: .55rem; } }
+.hero-shot { width: auto; max-width: none; rotate: 2deg; border-radius: 10px; }
