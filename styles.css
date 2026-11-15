@@ -651,3 +651,8 @@ section[aria-labelledby="roll-title"] .kicker { background: var(--fav-bg); color
 .pills { display: grid; grid-template-columns: repeat(4, 1fr); gap: .45rem; max-width: 34rem; }
 .pills li { display: flex; align-items: center; justify-content: center; text-align: center; white-space: nowrap; min-width: 0; }
 @media (max-width: 959px) { .pills { max-width: none; gap: .35rem; } .pills li { padding: .3rem .2rem; font-size: clamp(.68rem, 3.1vw, .8rem); } }
+/* Phone: headline on exactly two lines, first line spanning the full width */
+@media (max-width: 959px) {
+  .hero h1 { font-size: 8.85vw; text-wrap: wrap; letter-spacing: -.04em; line-height: 1.04; }
+  .hero h1 .l1 { display: block; white-space: nowrap; }
+}

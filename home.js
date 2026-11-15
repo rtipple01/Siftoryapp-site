@@ -317,3 +317,22 @@
   initRoll();
   initGallery();
 })();
+
+/* Phone: size the headline so its first line exactly spans the column, whatever font the phone uses. */
+(function fitHeadline() {
+  var h1 = document.getElementById('hero-title');
+  var line = h1 && h1.querySelector('.l1');
+  if (!line) return;
+  var mq = window.matchMedia('(max-width: 959px)');
+  function fit() {
+    h1.style.fontSize = '';
+    if (!mq.matches) return;
+    var target = h1.clientWidth, actual = line.scrollWidth;
+    if (!target || !actual) return;
+    var size = parseFloat(getComputedStyle(h1).fontSize) * (target / actual) * 0.995;
+    h1.style.fontSize = Math.min(size, 64) + 'px';
+  }
+  fit();
+  window.addEventListener('resize', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();
