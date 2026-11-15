@@ -615,3 +615,34 @@ main > section, .hero, .band { overflow-x: clip; }
   var(--page); }
 .reassure svg { color: var(--keep); }
 @media (max-width: 959px) { .pills { gap: .3rem; } .pills li { border-width: 1.5px; padding: .26rem .55rem; font-size: .76rem; } }
+
+/* More colour down the page: each section tinted in one of the app's swipe colours */
+#try      { background: linear-gradient(180deg, #E3F1F3, #EEF6F7); }
+#features { background: linear-gradient(180deg, #E6F3EB, #F0F7F2); }
+section[aria-labelledby="roll-title"] { background: linear-gradient(180deg, #F7EFD8, #FBF6E8); }
+.safe     { background: linear-gradient(180deg, #F8E6E1, #FCF1EE); }
+#screens  { background: linear-gradient(180deg, #E3EEE8, #EDF3EF); }
+#pricing  { background: linear-gradient(180deg, #FCEBD8, #FDF4EA); }
+#beta     { background: #EEF2EC; }
+#faq      { background: linear-gradient(180deg, #EEF2EC, #E9EEE9); }
+#try .section-head h2, #try h2 { color: var(--later); }
+#features h2 { color: var(--keep); }
+section[aria-labelledby="roll-title"] h2 { color: #6A4C0B; }
+.safe h2 { color: var(--trash); }
+#pricing h2 { color: #8A4508; }
+.kicker { display: inline-block; padding: .15rem .6rem; border-radius: 999px; font-size: .82rem; }
+#features .kicker { background: var(--keep-bg); color: var(--keep); }
+section[aria-labelledby="roll-title"] .kicker { background: var(--fav-bg); color: var(--fav); }
+.safe .kicker { background: var(--trash-bg); color: var(--trash); }
+/* How it works: each step number in a different swipe colour */
+.steps > li:nth-child(1)::before { background: var(--keep-bg); color: var(--keep); }
+.steps > li:nth-child(2)::before { background: var(--fav-bg); color: var(--fav); }
+.steps > li:nth-child(3)::before { background: var(--sift); color: var(--ink); }
+/* Privacy tiles: coloured icons and a top stripe */
+.facts > li { border-top: 4px solid var(--c, var(--coll)); }
+.facts > li:nth-child(1) { --c: #8FD3AE; } .facts > li:nth-child(2) { --c: #8CCFD6; }
+.facts > li:nth-child(3) { --c: #F1D27A; } .facts > li:nth-child(4) { --c: #F5B37A; }
+.facts > li svg { color: var(--c); }
+/* Free plan card gets a green edge to pair with the dark Lifetime card */
+.plan:not(.plan-life) { border-top: 6px solid var(--coll); }
+.plan-life { background: linear-gradient(150deg, #174B3A, #1F6B4E); border-top: 6px solid var(--gold); }
