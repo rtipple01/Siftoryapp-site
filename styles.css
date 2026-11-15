@@ -578,3 +578,26 @@ html:not(.js) .roll-track, .roll-wrap.is-playing .roll-track { animation-play-st
 html, body { max-width: 100%; overflow-x: hidden; }
 @supports (overflow: clip) { html, body { overflow-x: clip; } }
 main > section, .hero, .band { overflow-x: clip; }
+
+/* Tighter phone layout: less dead space, full-width alignment */
+@media (max-width: 959px) {
+  .home main > section { padding: 2.5rem 0; }
+  .home main > section.hero { padding: 1rem 0 2.5rem; }
+  .hero-grid { gap: 1.25rem; }
+  .pills { gap: .4rem; margin-bottom: 1rem; }
+  .pills li { font-size: .82rem; padding: .3rem .7rem; }
+  .hero h1 { max-width: none; font-size: clamp(2.4rem, 11.4vw, 3.6rem); margin-bottom: .35em; }
+  .hero .lead { font-size: 1.05rem; margin-bottom: 0; }
+  .hero-actions { flex-wrap: nowrap; margin: 1.25rem 0 .9rem; }
+  .hero-actions .btn { flex: 1 1 0; justify-content: center; padding-inline: .75rem; min-width: 0; }
+  .reassure { font-size: .95rem; }
+  .section-head { margin-bottom: 1.5rem; }
+  .section-head p { font-size: 1.02rem; }
+  .steps > li { padding: 1.25rem 1.25rem 1.25rem 4.25rem; }
+  .steps > li::before { left: 1.15rem; top: 1.2rem; }
+}
+@media (max-width: 959px) {
+  .hero h1 { font-size: clamp(2.4rem, 13vw, 3.8rem); }
+  .pills li { font-size: .78rem; padding: .28rem .62rem; }
+  .demo-phone { aspect-ratio: 9 / 16.5; }
+}
