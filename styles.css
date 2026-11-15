@@ -686,3 +686,10 @@ section[aria-labelledby="roll-title"] .kicker { background: var(--fav-bg); color
 /* Side tabs: arrows stay horizontal (← and →) while the word runs vertically */
 .m-tab.v .ar { display: inline-block; writing-mode: horizontal-tb; line-height: 1; margin: .2em 0; }
 .m-tab.v.l .ar { transform: rotate(180deg); }
+
+/* "Have a go": the tabs around the photo are tappable too */
+button.m-tab.tab-btn { font: inherit; font-weight: 800; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button.m-tab.tab-btn:hover { filter: brightness(.97); }
+button.m-tab.tab-btn:active { transform: scale(.96); }
+button.m-tab.v.l.tab-btn:active { transform: rotate(180deg) scale(.96); }
+button.m-tab.tab-btn:focus-visible { outline: 3px solid var(--deep); outline-offset: 2px; }
