@@ -564,3 +564,12 @@ html:not(.js) .roll-track, .roll-wrap.is-playing .roll-track { animation-play-st
 @media print { .site-header, .site-footer, .hero-stage, .roll-phone, .gallery-controls { display: none; } }
 .m-tab.v.t-browse { writing-mode: horizontal-tb; padding: 1.4rem .3rem; }
 .phone .mk { background: var(--marker); color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; }
+
+/* Demo phones: photos keep a natural 3:4 shape, with the side tabs over the photo edges like the app */
+.demo-phone .m-stage, .roll-phone .m-stage { align-content: center; }
+.demo-phone .m-mid, .roll-phone .m-mid { display: block; position: relative; }
+.demo-phone .m-mid .deck, .roll-phone .roll-view { width: 100%; height: auto; min-height: 0; aspect-ratio: 3 / 4; }
+.demo-phone .m-mid .m-tab.v, .roll-phone .m-mid .m-tab.v { position: absolute; top: 50%; z-index: 6; translate: 0 -50%; }
+.demo-phone .m-mid .m-tab.v:first-child, .roll-phone .m-mid .m-tab.v:first-child { left: -6px; }
+.demo-phone .m-mid .m-tab.v:last-child, .roll-phone .m-mid .m-tab.v:last-child { right: -6px; }
+.demo-phone .m-mid .m-tab.v.hit { box-shadow: 0 0 0 4px var(--c-bg); }
