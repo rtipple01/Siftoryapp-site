@@ -682,3 +682,7 @@ section[aria-labelledby="roll-title"] .kicker { background: var(--fav-bg); color
   .hero-split + .lead { margin-top: .8rem; }
   .hero-actions { clear: both; }
 }
+
+/* Side tabs: arrows stay horizontal (← and →) while the word runs vertically */
+.m-tab.v .ar { display: inline-block; writing-mode: horizontal-tb; line-height: 1; margin: .2em 0; }
+.m-tab.v.l .ar { transform: rotate(180deg); }
