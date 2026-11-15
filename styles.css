@@ -573,3 +573,8 @@ html:not(.js) .roll-track, .roll-wrap.is-playing .roll-track { animation-play-st
 .demo-phone .m-mid .m-tab.v:first-child, .roll-phone .m-mid .m-tab.v:first-child { left: -6px; }
 .demo-phone .m-mid .m-tab.v:last-child, .roll-phone .m-mid .m-tab.v:last-child { right: -6px; }
 .demo-phone .m-mid .m-tab.v.hit { box-shadow: 0 0 0 4px var(--c-bg); }
+
+/* Nothing (flying demo cards, glows, the screenshot strip) may widen the page sideways */
+html, body { max-width: 100%; overflow-x: hidden; }
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
+main > section, .hero, .band { overflow-x: clip; }
