@@ -116,6 +116,18 @@
 
     resetCounts();
     render();
+
+    /* Tapping a label (on the phone or the counters around it) swipes that way. */
+    var tapBusy = false;
+    stage.addEventListener('click', function (e) {
+      var t = e.target.closest('.m-tab[data-dir], .tally-chip[data-dir]');
+      if (!t || tapBusy) return;
+      tapBusy = true;
+      setTimeout(function () { tapBusy = false; }, 900);
+      clearTimeout(timer);
+      swipe(t.getAttribute('data-dir'));
+      if (running) timer = setTimeout(tick, 3000);
+    });
     playController(stage, $('[data-toggle-hero]', stage), function (run) {
       if (run === running) return;
       running = run;

@@ -22,8 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://siftoryapp.com/assets/feature-graphic.png">
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="styles.css?v=21">
-<script src="home.js?v=9" defer></script>
+<link rel="stylesheet" href="styles.css?v=23">
+<script src="home.js?v=10" defer></script>
 </head>
 <body class="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -142,7 +142,7 @@
       <div class="try-copy">
         <div class="section-head" style="margin-bottom:0">
           <h2 id="try-title">Have a go</h2>
-          <p class="js-only">Drag the photo in any direction, use the buttons, or press the arrow keys. These are sample pictures, so nothing here touches your own photos.</p>
+          <p class="js-only">Swipe the photo in any direction or tap a label. On a computer, the arrow keys work too. These are sample pictures, so nothing here touches your own photos.</p>
           <p class="no-js-only">Turn on JavaScript to try sorting these sample photos yourself.</p>
         </div>
         <ul class="tally" aria-label="Your sample sort so far">
@@ -152,14 +152,8 @@
           <li data-dir="right"><b data-try-count="right">0</b>Favourite</li>
         </ul>
         <p class="tally-total"><span data-try-done>0</span> of 8 sample photos sorted</p>
-        <div class="dpad js-only" role="group" aria-label="Sort the current photo">
-          <button type="button" data-dir="up" data-try-btn="up">↑ Keep</button>
-          <button type="button" data-dir="left" data-try-btn="left">← Later</button>
-          <button type="button" class="undo" data-try-undo disabled>Undo</button>
-          <button type="button" data-dir="right" data-try-btn="right">Favourite →</button>
-          <button type="button" data-dir="down" data-try-btn="down">↓ Trash</button>
-        </div>
-        <p class="try-note js-only">In the app, Trash is only a pile until you review it. <button type="button" class="try-reset" data-try-reset>Start again</button></p>
+        <p class="try-note js-only">In the app, Trash is only a pile until you review it.</p>
+        <p class="try-links js-only"><button type="button" class="try-reset" data-try-undo disabled>Undo</button> <span aria-hidden="true">·</span> <button type="button" class="try-reset" data-try-reset>Start again</button></p>
         <p class="visually-hidden" aria-live="polite" data-try-live></p>
       </div>
 

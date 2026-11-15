@@ -693,3 +693,7 @@ button.m-tab.tab-btn:hover { filter: brightness(.97); }
 button.m-tab.tab-btn:active { transform: scale(.96); }
 button.m-tab.v.l.tab-btn:active { transform: rotate(180deg) scale(.96); }
 button.m-tab.tab-btn:focus-visible { outline: 3px solid var(--deep); outline-offset: 2px; }
+[data-hero-demo] .m-tab[data-dir], [data-hero-demo] .tally-chip[data-dir] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.try-links { text-align: center; margin: .25rem 0 0; display: flex; gap: .5rem; justify-content: center; align-items: center; }
+.try-links button:disabled { opacity: .45; cursor: default; }
+@media (max-width: 959px) { .try-copy > .try-links { order: 7; } .try-copy > .try-note { margin-top: .75rem; } }
