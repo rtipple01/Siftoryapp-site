@@ -601,3 +601,17 @@ main > section, .hero, .band { overflow-x: clip; }
   .pills li { font-size: .78rem; padding: .28rem .62rem; }
   .demo-phone { aspect-ratio: 9 / 16.5; }
 }
+
+/* A splash of the app's swipe colours on first landing */
+.pills li { border: 2px solid transparent; font-weight: 800; }
+.pills li.p-keep  { background: var(--keep-bg);  color: var(--keep);  border-color: var(--keep); }
+.pills li.p-later { background: var(--later-bg); color: var(--later); border-color: var(--later); }
+.pills li.p-fav   { background: var(--fav-bg);   color: var(--fav);   border-color: #B8912F; }
+.pills li.p-sift  { background: #FCDDBD;         color: #7A3E06;      border-color: var(--orange); }
+.hero h1 .hl { color: var(--deep); background: linear-gradient(transparent 68%, rgba(240,168,94,.55) 68% 92%, transparent 92%); padding-inline: .04em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hero { background:
+  radial-gradient(60% 45% at 100% 0%, rgba(201,231,213,.85), transparent 70%),
+  radial-gradient(50% 40% at 0% 100%, rgba(240,168,94,.22), transparent 70%),
+  var(--page); }
+.reassure svg { color: var(--keep); }
+@media (max-width: 959px) { .pills { gap: .3rem; } .pills li { border-width: 1.5px; padding: .26rem .55rem; font-size: .76rem; } }
