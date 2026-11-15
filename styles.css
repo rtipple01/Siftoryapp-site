@@ -674,3 +674,11 @@ section[aria-labelledby="roll-title"] .kicker { background: var(--fav-bg); color
 .name-line .n-sift { color: var(--trash); background: var(--trash-bg); border-radius: 6px; padding: .05rem .4rem; }
 .name-line .n-story { color: var(--keep); background: var(--keep-bg); border-radius: 6px; padding: .05rem .4rem; }
 .name-line + .lead { margin-top: .75rem; }
+
+/* Phone hero: screenshot floats right beside the headline and the start of the intro text */
+@media (max-width: 959px) {
+  .hero-split { display: block; }
+  .hero-shot { float: right; width: 31%; height: auto !important; margin: .2rem 0 .6rem 1rem; rotate: 2deg; }
+  .hero-split + .lead { margin-top: .8rem; }
+  .hero-actions { clear: both; }
+}

@@ -327,7 +327,9 @@
   function fit() {
     h1.style.fontSize = '';
     if (!mq.matches) return;
-    var target = h1.clientWidth, actual = Math.max.apply(null, lines.map(function (l) { return l.scrollWidth; }));
+    var shotEl = document.querySelector('.hero-shot');
+    var shotW = shotEl && getComputedStyle(shotEl).float !== 'none' ? shotEl.offsetWidth + parseFloat(getComputedStyle(shotEl).marginLeft || 0) : 0;
+    var target = h1.clientWidth - shotW, actual = Math.max.apply(null, lines.map(function (l) { return l.scrollWidth; }));
     if (!target || !actual) return;
     var size = parseFloat(getComputedStyle(h1).fontSize) * (target / actual) * 0.995;
     h1.style.fontSize = Math.min(size, 80) + 'px';
@@ -338,18 +340,3 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 })();
 
-/* Preview layout: the app screenshot matches the height of the three headline lines. */
-(function matchShot() {
-  var shot = document.querySelector('.hero-shot');
-  var h1 = document.getElementById('hero-title');
-  if (!shot || !h1) return;
-  function size() {
-    for (var i = 0; i < 3; i++) {
-      shot.style.height = h1.offsetHeight + 'px';
-      window.dispatchEvent(new Event('siftory:refit'));
-    }
-  }
-  if (shot.complete) size(); else shot.addEventListener('load', size);
-  window.addEventListener('resize', size);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(size);
-})();
