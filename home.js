@@ -61,13 +61,15 @@
     var cur = 0;
     var timer = null;
     var running = false;
-    var start = { up: 5, down: 4, left: 1, right: 2 };
+    var start = { up: 2, down: 24, left: 0, right: 1 };
     var counts = {};
     var sequence = ['up', 'right', 'down', 'up', 'left', 'up', 'down', 'right', 'up', 'down'];
     var step = 0;
     var sortedEl = $('[data-sorted]', stage);
     var trashEl = $('[data-trashed]', stage);
     var progress = $('[data-progress]', stage);
+    var currentEl = $('[data-current]', stage);
+    var POOL = 1242;
 
     function resetCounts() { Object.keys(start).forEach(function (k) { counts[k] = start[k]; }); }
     function total() { return counts.up + counts.down + counts.left + counts.right; }
@@ -75,7 +77,8 @@
       Object.keys(counts).forEach(function (k) { var el = $('[data-count="' + k + '"]', stage); if (el) el.textContent = counts[k]; });
       sortedEl.textContent = total();
       trashEl.textContent = counts.down;
-      progress.style.width = Math.min(100, Math.round(total() / 50 * 100)) + '%';
+      if (currentEl) currentEl.textContent = total() + 1;
+      progress.style.width = (total() / POOL * 100).toFixed(2) + '%';
     }
     function layout() {
       cards.forEach(function (card, i) {
@@ -95,7 +98,7 @@
         cur = (cur + 1) % n;
         layout();
         counts[dir] += 1;
-        if (total() >= 50) resetCounts();
+        if (total() >= 60) resetCounts();
         render();
       }, 220);
       setTimeout(function () {
@@ -149,7 +152,8 @@
     var counts = { up: 0, down: 0, left: 0, right: 0 };
     var endPanel = $('[data-try-end]', deck);
     var live = $('[data-try-live]', section);
-    var undoBtn = $('[data-try-undo]', section);
+    var undoBtns = $$('[data-try-undo]', section);
+    var progressEl = $('[data-try-progress]', section);
     var dirButtons = $$('[data-try-btn]', section);
     var drag = null;
 
@@ -159,9 +163,11 @@
       });
     }
     function render() {
-      Object.keys(counts).forEach(function (k) { $('[data-try-count="' + k + '"]', section).textContent = counts[k]; });
-      $('[data-try-done]', section).textContent = cur;
-      undoBtn.disabled = cur === 0;
+      Object.keys(counts).forEach(function (k) { $$('[data-try-count="' + k + '"]', section).forEach(function (el) { el.textContent = counts[k]; }); });
+      $$('[data-try-done]', section).forEach(function (el) { el.textContent = cur; });
+      $$('[data-try-current]', section).forEach(function (el) { el.textContent = Math.min(cur + 1, n); });
+      if (progressEl) progressEl.style.width = (cur / n * 100) + '%';
+      undoBtns.forEach(function (b) { b.disabled = cur === 0; });
       dirButtons.forEach(function (b) { b.disabled = cur >= n; });
     }
     function tabs(dir) { return $('.m-tab[data-dir="' + dir + '"]', stageEl); }
@@ -281,7 +287,7 @@
     dirButtons.forEach(function (b) {
       b.addEventListener('click', function () { swipe(b.getAttribute('data-try-btn')); });
     });
-    undoBtn.addEventListener('click', undo);
+    undoBtns.forEach(function (b) { b.addEventListener('click', undo); });
     $('[data-try-reset]', section).addEventListener('click', reset);
     $('[data-try-again]', section).addEventListener('click', function () { reset(); deck.focus(); });
 
