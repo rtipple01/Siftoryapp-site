@@ -699,3 +699,30 @@ button.m-tab.tab-btn:focus-visible { outline: 3px solid var(--deep); outline-off
 @media (max-width: 959px) { .try-copy > .try-links { order: 7; } .try-copy > .try-note { margin-top: .75rem; } }
 /* A photo that hasn't loaded yet shows the plain card colour, never broken-image text */
 .sw-card img, .roll-track img, .albums img { color: transparent; }
+
+/* Desktop hero: a fan of real app screens (Collections, Sift, Media Roll) */
+.hero-visual { display: none; }
+@media (min-width: 960px) {
+  .hero-visual { display: block; position: relative; height: 600px; width: 100%; max-width: 560px; justify-self: center; }
+  .hv { position: absolute; top: 50%; left: 50%; height: auto; border-radius: 22px; box-shadow: 0 30px 60px -24px rgba(16,35,28,.55), 0 2px 0 rgba(255,255,255,.6) inset; }
+  .hv-front { width: 270px; translate: -50% -50%; rotate: 0deg; z-index: 3; }
+  .hv-back { width: 220px; z-index: 1; filter: saturate(.95); }
+  .hv-left  { translate: -118% -46%; rotate: -9deg; }
+  .hv-right { translate: 18% -46%; rotate: 9deg; }
+  .hero-visual::before { content: ""; position: absolute; inset: 8% 4%; border-radius: 50%; background: radial-gradient(closest-side, rgba(143,211,174,.55), rgba(241,210,122,.25) 60%, transparent); filter: blur(10px); z-index: 0; }
+}
+@media (min-width: 960px) and (prefers-reduced-motion: no-preference) {
+  .hv-front { animation: hv-float 6s ease-in-out infinite; }
+  @keyframes hv-float { 50% { translate: -50% calc(-50% - 10px); } }
+}
+
+/* How it works: animated phone on the left, the three steps stacked on the right */
+.how-grid { display: grid; gap: 2rem; }
+.how-grid .hero-stage { padding: 1.5rem 0 3.5rem; }
+@media (min-width: 960px) {
+  .how-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: 3.5rem; }
+  .how-grid .hero-stage { padding: 0 0 3rem; }
+}
+.band .anim-toggle { background: rgba(255,255,255,.12); color: #fff; border-color: rgba(255,255,255,.35); }
+.how-grid .steps { grid-template-columns: 1fr !important; }
+@media (max-width: 959px) { .how-grid { gap: 1rem; } .how-grid .hero-stage { padding-bottom: 4rem; } }

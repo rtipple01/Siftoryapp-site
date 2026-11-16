@@ -22,8 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://siftoryapp.com/assets/feature-graphic.png">
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="styles.css?v=24">
-<script src="home.js?v=11" defer></script>
+<link rel="stylesheet" href="styles.css?v=27">
+<script src="home.js?v=12" defer></script>
 </head>
 <body class="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -71,37 +71,10 @@
         </p>
       </div>
 
-      <div class="hero-stage" data-hero-demo>
-        <div class="compass" aria-hidden="true"></div>
-        <span class="tally-chip" data-dir="up" aria-hidden="true">↑ Keep <b data-count="up">5</b></span>
-        <span class="tally-chip" data-dir="right" aria-hidden="true">Favourite <b data-count="right">2</b></span>
-        <span class="tally-chip" data-dir="down" aria-hidden="true">↓ Trash <b data-count="down">4</b></span>
-        <span class="tally-chip" data-dir="left" aria-hidden="true">Later <b data-count="left">1</b></span>
-
-        <div class="phone demo-phone" role="img" aria-label="Animated example of the Siftory Sift screen: photos are swiped up to Keep, down to Trash, left to Later and right to Favourite, and a counter adds up how many have been sorted.">
-          <div class="m-top" aria-hidden="true"><span style="background:var(--card)">‹ Leave</span><span style="background:var(--card)">Review</span></div>
-          <div class="m-progress" aria-hidden="true"><i data-progress style="width:24%"></i></div>
-          <div class="m-stage" aria-hidden="true">
-            <span class="m-tab t-keep" data-dir="up">↑ Keep</span>
-            <div class="m-mid">
-              <span class="m-tab v l t-later" data-dir="left"><span class="ar">←</span> Later</span>
-              <div class="deck" data-deck>
-                <figure class="sw-card" data-pos="0"><img src="assets/demo/photo-1.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
-                <figure class="sw-card" data-pos="1"><img src="assets/demo/photo-3.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
-                <figure class="sw-card" data-pos="2"><img src="assets/demo/photo-6.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
-                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-2.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
-                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-5.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
-                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-4.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
-                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-8.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
-                <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-7.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
-              </div>
-              <span class="m-tab v t-fav" data-dir="right">Favourite <span class="ar">→</span></span>
-            </div>
-            <span class="m-tab t-trash" data-dir="down">↓ Trash</span>
-          </div>
-          <div class="m-count" aria-hidden="true"><span><span data-sorted>12</span> sorted</span><span class="tr"><span data-trashed>4</span> to Trash</span></div>
-        </div>
-        <button type="button" class="anim-toggle js-only" data-toggle-hero aria-pressed="false">Pause animation</button>
+      <div class="hero-visual" aria-hidden="true">
+        <img class="hv hv-back hv-left" src="assets/screens/app-collections.webp" width="672" height="1572" alt="" decoding="async">
+        <img class="hv hv-back hv-right" src="assets/screens/app-roll.webp" width="804" height="1572" alt="" decoding="async">
+        <img class="hv hv-front" src="assets/screens/app-sift.webp" width="804" height="1572" alt="" decoding="async">
       </div>
     </div>
   </section>
@@ -113,6 +86,35 @@
         <h2 id="how-title">How it works</h2>
         <p>A few minutes here and there is all it takes. Stop whenever you like and pick up where you left off.</p>
       </div>
+      <div class="how-grid">
+      <div class="hero-stage" data-hero-demo>
+          <div class="compass" aria-hidden="true"></div>
+
+          <div class="phone demo-phone" role="img" aria-label="Animated example of the Siftory Sift screen: photos are swiped up to Keep, down to Trash, left to Later and right to Favourite, and a counter adds up how many have been sorted.">
+            <div class="m-top" aria-hidden="true"><span style="background:var(--card)">‹ Leave</span><span style="background:var(--card)">Review</span></div>
+            <div class="m-progress" aria-hidden="true"><i data-progress style="width:24%"></i></div>
+            <div class="m-stage" aria-hidden="true">
+              <span class="m-tab t-keep" data-dir="up">↑ Keep</span>
+              <div class="m-mid">
+                <span class="m-tab v l t-later" data-dir="left"><span class="ar">←</span> Later</span>
+                <div class="deck" data-deck>
+                  <figure class="sw-card" data-pos="0"><img src="assets/demo/photo-1.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                  <figure class="sw-card" data-pos="1"><img src="assets/demo/photo-3.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                  <figure class="sw-card" data-pos="2"><img src="assets/demo/photo-6.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                  <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-2.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                  <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-5.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                  <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-4.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                  <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-8.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                  <figure class="sw-card" data-pos="3"><img src="assets/demo/photo-7.webp" alt="" width="600" height="800" decoding="async"><span class="stamp"></span></figure>
+                </div>
+                <span class="m-tab v t-fav" data-dir="right">Favourite <span class="ar">→</span></span>
+              </div>
+              <span class="m-tab t-trash" data-dir="down">↓ Trash</span>
+            </div>
+            <div class="m-count" aria-hidden="true"><span><span data-sorted>12</span> sorted</span><span class="tr"><span data-trashed>4</span> to Trash</span></div>
+          </div>
+          <button type="button" class="anim-toggle js-only" data-toggle-hero aria-pressed="false">Pause animation</button>
+        </div>
       <ol class="steps">
         <li>
           <h3>Pick what to sift</h3>
@@ -133,6 +135,7 @@
           <p>See every decision in one place and change anything you like. Your phone only changes when you tap Complete.</p>
         </li>
       </ol>
+      </div>
     </div>
   </section>
 

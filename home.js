@@ -72,7 +72,7 @@
     function resetCounts() { Object.keys(start).forEach(function (k) { counts[k] = start[k]; }); }
     function total() { return counts.up + counts.down + counts.left + counts.right; }
     function render() {
-      Object.keys(counts).forEach(function (k) { $('[data-count="' + k + '"]', stage).textContent = counts[k]; });
+      Object.keys(counts).forEach(function (k) { var el = $('[data-count="' + k + '"]', stage); if (el) el.textContent = counts[k]; });
       sortedEl.textContent = total();
       trashEl.textContent = counts.down;
       progress.style.width = Math.min(100, Math.round(total() / 50 * 100)) + '%';
@@ -89,7 +89,7 @@
       var card = cards[cur];
       setStamp(card, dir);
       card.classList.add('stamped', 'flying');
-      flash([$('.m-tab[data-dir="' + dir + '"]', stage), $('.tally-chip[data-dir="' + dir + '"]', stage)], 700);
+      flash([$('.m-tab[data-dir="' + dir + '"]', stage), $('.tally-chip[data-dir="' + dir + '"]', stage)].filter(Boolean), 700);
       setTimeout(function () {
         card.classList.add('out-' + dir);
         cur = (cur + 1) % n;
