@@ -912,3 +912,174 @@ button.as-tab.v.l.tab-btn:active { transform: rotate(180deg) scale(.96); }
 .roll-phone.app-phone::before { display: none; }
 .cp-behind { display: flow-root; }
 .as-tab.v .ar, .roll-app .rl-side .ar { width: calc(var(--u) * 15); font-size: calc(var(--u) * 9); }
+
+/* ===================================================================
+   Polish pass (v30): working Keep Collections in "Have a go",
+   balanced Have a go / Pricing layouts, even text-to-visual heights.
+   =================================================================== */
+
+/* --- Keep Collection chips: colours shared by the phone chips, the tally row and the stamps --- */
+.c-fam { --cc: #CB795C; --cc-ink: #9A4A2E; --cc-bg: #FBE7DF; }
+.c-ref { --cc: #476C94; --cc-ink: #34587F; --cc-bg: #DDE7F2; }
+.c-fun { --cc: #A673A8; --cc-ink: #7E4B80; --cc-bg: #F1E3F1; }
+.c-rnd { --cc: #8F673C; --cc-ink: #6F4D27; --cc-bg: #F1E6D7; }
+.stamp[data-coll="0"] { --c: #9A4A2E; --c-bg: #FBE7DF; }
+.stamp[data-coll="1"] { --c: #34587F; --c-bg: #DDE7F2; }
+.stamp[data-coll="2"] { --c: #7E4B80; --c-bg: #F1E3F1; }
+.stamp[data-coll="3"] { --c: #6F4D27; --c-bg: #F1E6D7; }
+
+.as-colls li { transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease; }
+.as-colls li.aim { box-shadow: 0 0 0 calc(var(--u) * 2) #fff, 0 0 0 calc(var(--u) * 4) color-mix(in srgb, var(--cc) 50%, transparent); }
+.as-colls li.pick, .as-colls li.hit {
+  background: var(--cc-bg); transform: scale(1.07);
+  box-shadow: 0 0 0 calc(var(--u) * 3) #fff, 0 0 0 calc(var(--u) * 5.5) var(--cc);
+}
+.as-colls li.hit i, .as-colls li.pick i { color: var(--cc-ink); font-weight: 900; }
+
+/* In "Have a go" the chips are real buttons, drawn above the photo so they stay visible while you drag onto them */
+.try-colls { position: relative; z-index: 7; }
+.try-stage .as-tab.t-keep { z-index: 9; }
+.try-colls li { padding: 0; }
+.try-colls li button {
+  font: inherit; color: inherit; background: none; border: 0; margin: 0; padding: 0;
+  width: 100%; height: 100%; border-radius: inherit; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: calc(var(--u) * 3); white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+.try-colls li:hover:not(.hit):not(.pick) { background: var(--cc-bg); }
+.try-colls li:active { transform: scale(.96); }
+.try-colls li button:focus-visible { outline: 3px solid var(--deep); outline-offset: 3px; }
+.try-colls li button:disabled { cursor: default; }
+.try-colls li:has(button:disabled) { opacity: .55; }
+
+/* --- "Have a go": left column sized to balance the phone --- */
+.try-head h2 { font-size: clamp(2.2rem, 4.2vw, 3.25rem); letter-spacing: -.035em; margin-bottom: .4em; }
+.try-head p { font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.6; }
+.try-panel { margin-top: 2rem; }
+.try-panel .tally { margin: 0; max-width: none; gap: .75rem; }
+.try-panel .tally li {
+  padding: 1.05rem .4rem .95rem; border-radius: 20px; font-size: 1rem;
+  border: 2px solid color-mix(in srgb, var(--c) 28%, transparent);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.try-panel .tally b { font-size: clamp(2.2rem, 3.6vw, 3rem); line-height: 1.05; margin-bottom: .15rem; }
+.tally-sub { margin: 1.3rem 0 .55rem; font-weight: 800; font-size: .95rem; color: var(--muted); }
+.coll-tally { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; }
+.coll-tally li {
+  display: flex; align-items: center; justify-content: center; gap: .4rem; min-width: 0; height: 3.1rem;
+  background: #FFFCFA; border: 2px solid var(--cc); border-radius: 14px;
+  font-weight: 800; font-size: .95rem; color: var(--ink); white-space: nowrap;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.coll-tally .ico { color: var(--cc); font-size: .8em; }
+.coll-tally .c-fam .ico { color: #E0334A; font-size: 1em; }
+.coll-tally b { background: var(--cc); color: #fff; border-radius: 999px; min-width: 1.65em; padding: 0 .45em; text-align: center; font-size: .85rem; line-height: 1.5; }
+.coll-tally li.hit { background: var(--cc-bg); transform: translateY(-2px); box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--cc); }
+.try-panel .tally li.hit { transform: translateY(-2px); box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--c); }
+.try-progress { margin-top: 1.5rem; }
+.try-panel .tally-total { margin: 0 0 .5rem; color: var(--ink); font-size: 1.05rem; }
+.try-bar { height: 10px; border-radius: 999px; background: #fff; border: 1px solid var(--line); overflow: hidden; }
+.try-bar i { display: block; height: 100%; width: 0; border-radius: 999px; background: var(--keep); transition: width .4s ease; }
+.try-panel .try-note { margin: 1rem 0 0; font-size: .98rem; }
+.try-actions { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.try-btn { width: 100%; background: #fff; gap: .5rem; }
+.try-btn svg { width: 20px; height: 20px; flex: none; }
+.try-btn:disabled { opacity: .5; cursor: default; border-color: var(--line); color: var(--deep); }
+@media (min-width: 900px) {
+  .try { grid-template-columns: minmax(0, 1fr) auto; gap: 5rem; }
+  .try-copy { align-self: center; }
+  .try-head { max-width: none; }
+}
+@media (max-width: 899px) {
+  .try-copy > .try-panel { order: 3; margin-top: 2rem; }
+  .try-copy > .try-head { order: 1; }
+}
+@media (max-width: 520px) {
+  .try-panel .tally, .coll-tally, .try-actions { gap: .45rem; }
+  .try-panel .tally li { padding: .8rem .2rem .75rem; font-size: .85rem; border-radius: 16px; }
+  .coll-tally li { font-size: .78rem; gap: .25rem; height: 2.7rem; border-radius: 12px; }
+  .coll-tally b { font-size: .75rem; }
+  .coll-tally .ico { display: none; }
+}
+
+/* --- Pricing: plans on the left, the app's Lifetime screen on the right --- */
+.pricing { display: grid; gap: 2.5rem; align-items: center; }
+.pricing .plans { max-width: none; }
+.pricing .plans-note { margin-top: 1.25rem; }
+.pricing .life-phone.app-phone { display: none; }
+@media (min-width: 960px) {
+  .pricing { grid-template-columns: minmax(0, 1fr) auto; gap: 5rem; }
+  .pricing .life-phone.app-phone { display: block; }
+  .pricing .section-head h2 { font-size: clamp(2rem, 3.2vw, 2.6rem); }
+}
+.life-phone.app-phone { --w: 320px; }
+.life-app .lf-body { padding: calc(var(--u) * 22) calc(var(--u) * 16) 0; display: flex; flex-direction: column; gap: calc(var(--u) * 14); }
+.lf-heading { display: grid; gap: calc(var(--u) * 4); }
+.lf-eyebrow { color: #2F7259; font-size: calc(var(--u) * 12); font-weight: 900; letter-spacing: calc(var(--u) * 1.4); }
+.lf-title { color: #10231C; font-size: calc(var(--u) * 30); font-weight: 900; letter-spacing: calc(var(--u) * -.7); line-height: 1.15; }
+.lf-intro { color: #4A5F56; font-size: calc(var(--u) * 15); line-height: 1.4; }
+.lf-offer {
+  background: #F4E6BE; border: calc(var(--u) * 1) solid #D3A84F; border-radius: calc(var(--u) * 24);
+  padding: calc(var(--u) * 20); display: flex; flex-direction: column; gap: calc(var(--u) * 11);
+}
+.lf-offer-title { color: #174B3A; font-size: calc(var(--u) * 26); font-weight: 900; letter-spacing: calc(var(--u) * -.5); line-height: 1.2; }
+.lf-copy { color: #10231C; font-size: calc(var(--u) * 14.5); font-weight: 700; line-height: 1.4; margin-top: calc(var(--u) * -4); }
+.lf-price { display: flex; align-items: baseline; gap: calc(var(--u) * 8); color: #4A5F56; font-size: calc(var(--u) * 15); font-weight: 800; }
+.lf-price b { color: #174B3A; font-size: calc(var(--u) * 34); font-weight: 900; letter-spacing: calc(var(--u) * -.8); line-height: 1; }
+.lf-offer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: calc(var(--u) * 8); }
+.lf-offer li {
+  display: flex; align-items: center; gap: calc(var(--u) * 10); min-height: calc(var(--u) * 42); padding: 0 calc(var(--u) * 14);
+  background: #FFFDF8; border: calc(var(--u) * 1) solid #D3A84F; border-radius: calc(var(--u) * 12);
+  font-size: calc(var(--u) * 14.5); font-weight: 700; color: #10231C;
+}
+.lf-offer li i { font-style: normal; color: #2F7259; font-weight: 900; font-size: calc(var(--u) * 16); }
+.lf-buy {
+  display: grid; place-items: center; min-height: calc(var(--u) * 50); border-radius: 999px;
+  background: #E88B32; border: calc(var(--u) * 1) solid #C96F1F; color: #174B3A; font-size: calc(var(--u) * 16); font-weight: 900;
+}
+.lf-free { display: grid; gap: calc(var(--u) * 5); background: #FFFDF8; border: calc(var(--u) * 1) solid #A9C2B6; border-radius: calc(var(--u) * 16); padding: calc(var(--u) * 14) calc(var(--u) * 16); }
+.lf-free b { color: #10231C; font-size: calc(var(--u) * 15); font-weight: 900; }
+.lf-free span { color: #4A5F56; font-size: calc(var(--u) * 13.5); line-height: 1.4; }
+.life-app .as-nav { margin-top: calc(var(--u) * 20); }
+
+/* --- Text columns beside a large visual: bigger type so the two sides are close in height --- */
+@media (min-width: 960px) {
+  .split h2 { font-size: clamp(2.1rem, 3.3vw, 2.75rem); letter-spacing: -.03em; }
+  .split .section-intro { font-size: 1.22rem; line-height: 1.6; }
+  .split .ticks { margin-top: 1.75rem; gap: 1.05rem; }
+  .split .ticks li { font-size: 1.12rem; }
+  .split .ticks li::before { top: .32em; }
+  .split .kicker { margin-bottom: 1rem; }
+}
+
+/* --- FAQ: the narrow centred column gets a centred heading and footer line --- */
+.faq-home > h2, .faq-home > .faq-more { text-align: center; }
+.faq-home > h2 { margin-bottom: 1.25rem; }
+
+/* --- Even heights at desktop: Collections panel, Media Roll phone, safety steps, Lifetime phone --- */
+@media (min-width: 960px) {
+  .albums .mosaic { aspect-ratio: 16 / 10; grid-template-rows: repeat(2, minmax(0, 1fr)); overflow: hidden; }
+  .albums .mosaic img { min-height: 0; }
+  .roll-phone.app-phone { --w: 300px; }
+  .split .ticks { gap: 1.2rem; }
+  .safety .flow { gap: 1rem; }
+  .safety .flow li { padding: 1.35rem 1.5rem 1.35rem 4.25rem; }
+  .safety .flow li::before { top: 1.35rem; left: 1.35rem; }
+  .life-phone.app-phone { --w: 340px; }
+}
+@media (min-width: 960px) {
+  .pricing { gap: 4rem; }
+  .life-phone.app-phone { --w: 330px; }
+  .pricing .plan { padding: 1.5rem 1.6rem; }
+  .pricing .plan .ticks { gap: .55rem; }
+  .pricing .plan .ticks li { font-size: 1rem; }
+  .pricing .section-head { margin-bottom: 2rem; max-width: none; }
+  .pricing .section-head h2 { max-width: 15em; }
+}
+.try-panel .tally-total, .try-panel .try-note { text-align: left; }
+.try-btn { white-space: nowrap; }
+@media (max-width: 400px) {
+  .try-btn { padding-inline: .6rem; }
+  .coll-tally li { font-size: .7rem; gap: .2rem; padding: 0 .15rem; }
+  .coll-tally b { font-size: .68rem; min-width: 1.5em; padding: 0 .3em; }
+}

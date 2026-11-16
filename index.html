@@ -22,8 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://siftoryapp.com/assets/feature-graphic.png">
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="styles.css?v=29">
-<script src="home.js?v=13" defer></script>
+<link rel="stylesheet" href="styles.css?v=30">
+<script src="home.js?v=14" defer></script>
 </head>
 <body class="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -95,7 +95,7 @@
               <div class="as-head" aria-hidden="true"><span class="as-logo"></span><b class="as-brand">Siftory</b><span class="as-plan">FREE PLAN</span><span class="as-cog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span></div>
               <div class="as-bar" aria-hidden="true"><span>‹ Leave</span><b>Sift</b><span>Review</span></div>
               <div class="as-src" aria-hidden="true"><b>New &amp; Unsifted</b><span><span data-current>28</span> of 1242</span></div>
-              <div class="as-colls" aria-hidden="true"><p>Swipe up to keep · hold, then swipe up to pick a Collection</p><ul><li class="c-fam"><span class="ico">♥</span>Family <i>0</i></li><li class="c-ref"><span class="ico">◆</span>For Ref <i>0</i></li><li class="c-fun"><span class="ico">★</span>Fun <i>0</i></li><li class="c-rnd"><span class="ico">●</span>Random <i>0</i></li></ul></div>
+              <div class="as-colls" aria-hidden="true"><p>Swipe up to keep · hold, then swipe up to pick a Collection</p><ul><li class="c-fam" data-coll="0"><span class="ico">♥</span>Family <i>0</i></li><li class="c-ref" data-coll="1"><span class="ico">◆</span>For Ref <i>0</i></li><li class="c-fun" data-coll="2"><span class="ico">★</span>Fun <i>0</i></li><li class="c-rnd" data-coll="3"><span class="ico">●</span>Random <i>0</i></li></ul></div>
               <div class="as-stage">
                 <span class="m-tab as-tab t-keep" data-dir="up"><span class="ar" aria-hidden="true">↑</span>Keep</span>
                 <span class="m-tab as-tab v l t-later" data-dir="left"><span class="ar" aria-hidden="true">←</span>Later</span>
@@ -148,20 +148,35 @@
   <section id="try" aria-labelledby="try-title">
     <div class="wrap try">
       <div class="try-copy">
-        <div class="section-head" style="margin-bottom:0">
+        <div class="section-head try-head">
           <h2 id="try-title">Have a go</h2>
-          <p class="js-only">Swipe the photo in any direction or tap a label. On a computer, the arrow keys work too. These are sample pictures, so nothing here touches your own photos.</p>
+          <p class="js-only">Swipe the photo in any direction or tap a label. To keep a photo straight into a Collection, tap a Collection, or drag the photo up onto one. On a computer, use the arrow keys, or 1 to 4 for the Collections. These are sample pictures, so nothing here touches your own photos.</p>
           <p class="no-js-only">Turn on JavaScript to try sorting these sample photos yourself.</p>
         </div>
-        <ul class="tally" aria-label="Your sample sort so far">
-          <li data-dir="up"><b data-try-count="up">0</b>Keep</li>
-          <li data-dir="down"><b data-try-count="down">0</b>Trash</li>
-          <li data-dir="left"><b data-try-count="left">0</b>Later</li>
-          <li data-dir="right"><b data-try-count="right">0</b>Favourite</li>
-        </ul>
-        <p class="tally-total"><span data-try-done>0</span> of 8 sample photos sorted</p>
-        <p class="try-note js-only">In the app, Trash is only a pile until you review it.</p>
-        <p class="try-links js-only"><button type="button" class="try-reset" data-try-undo disabled>Undo</button> <span aria-hidden="true">·</span> <button type="button" class="try-reset" data-try-reset>Start again</button></p>
+        <div class="try-panel">
+          <ul class="tally" aria-label="Your sample sort so far">
+            <li data-dir="up"><b data-try-count="up">0</b>Keep</li>
+            <li data-dir="down"><b data-try-count="down">0</b>Trash</li>
+            <li data-dir="left"><b data-try-count="left">0</b>Later</li>
+            <li data-dir="right"><b data-try-count="right">0</b>Favourite</li>
+          </ul>
+          <p class="tally-sub" id="try-coll-label">Kept straight into a Collection</p>
+          <ul class="coll-tally" aria-labelledby="try-coll-label">
+            <li class="c-fam"><span class="ico" aria-hidden="true">♥</span>Family <b data-try-coll-total="0">0</b></li>
+            <li class="c-ref"><span class="ico" aria-hidden="true">◆</span>For Ref <b data-try-coll-total="1">0</b></li>
+            <li class="c-fun"><span class="ico" aria-hidden="true">★</span>Fun <b data-try-coll-total="2">0</b></li>
+            <li class="c-rnd"><span class="ico" aria-hidden="true">●</span>Random <b data-try-coll-total="3">0</b></li>
+          </ul>
+          <div class="try-progress">
+            <p class="tally-total"><span data-try-done>0</span> of 8 sample photos sorted</p>
+            <div class="try-bar" aria-hidden="true"><i data-try-bar></i></div>
+          </div>
+          <p class="try-note js-only">In the app, Trash is only a pile until you review it.</p>
+          <div class="try-actions js-only">
+            <button type="button" class="btn btn-ghost try-btn" data-try-undo disabled><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>Undo</button>
+            <button type="button" class="btn btn-ghost try-btn" data-try-reset><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Start again</button>
+          </div>
+        </div>
         <p class="visually-hidden" aria-live="polite" data-try-live></p>
       </div>
 
@@ -171,11 +186,11 @@
             <div class="as-head" aria-hidden="true"><span class="as-logo"></span><b class="as-brand">Siftory</b><span class="as-plan">FREE PLAN</span><span class="as-cog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span></div>
             <div class="as-bar" aria-hidden="true"><span>‹ Leave</span><b>Sift</b><span>Review</span></div>
             <div class="as-src" aria-hidden="true"><b>New &amp; Unsifted</b><span><span data-try-current>1</span> of 8</span></div>
-            <div class="as-colls" aria-hidden="true"><p>Swipe up to keep · hold, then swipe up to pick a Collection</p><ul><li class="c-fam"><span class="ico">♥</span>Family <i>0</i></li><li class="c-ref"><span class="ico">◆</span>For Ref <i>0</i></li><li class="c-fun"><span class="ico">★</span>Fun <i>0</i></li><li class="c-rnd"><span class="ico">●</span>Random <i>0</i></li></ul></div>
+            <div class="as-colls try-colls"><p aria-hidden="true">Swipe up to keep · hold, then swipe up to pick a Collection</p><ul aria-label="Keep Collections"><li class="c-fam"><button type="button" data-try-coll="0" aria-label="Keep in Family"><span class="ico" aria-hidden="true">♥</span>Family <i data-try-coll-count="0">0</i></button></li><li class="c-ref"><button type="button" data-try-coll="1" aria-label="Keep in For Ref"><span class="ico" aria-hidden="true">◆</span>For Ref <i data-try-coll-count="1">0</i></button></li><li class="c-fun"><button type="button" data-try-coll="2" aria-label="Keep in Fun"><span class="ico" aria-hidden="true">★</span>Fun <i data-try-coll-count="2">0</i></button></li><li class="c-rnd"><button type="button" data-try-coll="3" aria-label="Keep in Random"><span class="ico" aria-hidden="true">●</span>Random <i data-try-coll-count="3">0</i></button></li></ul></div>
             <div class="as-stage">
               <button type="button" class="m-tab tab-btn as-tab t-keep" data-dir="up" data-try-btn="up"><span class="ar" aria-hidden="true">↑</span>Keep</button>
               <button type="button" class="m-tab tab-btn as-tab v l t-later" data-dir="left" data-try-btn="left"><span class="ar" aria-hidden="true">←</span>Later</button>
-              <div class="deck as-deck try-deck" data-try-deck tabindex="0" role="group" aria-roledescription="photo card" aria-label="Sample photo to sort. Use the arrow keys: up to Keep, down to Trash, left for Later, right for Favourite.">
+              <div class="deck as-deck try-deck" data-try-deck tabindex="0" role="group" aria-roledescription="photo card" aria-label="Sample photo to sort. Use the arrow keys: up to Keep, down to Trash, left for Later, right for Favourite. Press 1 to 4 to keep it in Family, For Ref, Fun or Random.">
                 <figure class="sw-card" data-pos="0"><img src="assets/demo/photo-3.webp" alt="Sample photo: a beagle looking up at the camera" width="600" height="800" decoding="async"><figcaption class="as-meta" aria-hidden="true"><b>20260816_195902.jpg</b><small>Phone gallery</small><i>image</i></figcaption><span class="stamp"></span></figure>
                 <figure class="sw-card" data-pos="1"><img src="assets/demo/photo-9.webp" alt="Sample photo: a boat on a turquoise mountain lake" width="600" height="800" decoding="async"><figcaption class="as-meta" aria-hidden="true"><b>20260711_102530.jpg</b><small>Phone gallery</small><i>image</i></figcaption><span class="stamp"></span></figure>
                 <figure class="sw-card" data-pos="2"><img src="assets/demo/photo-2.webp" alt="Sample photo: a wooden jetty at sunset" width="600" height="800" decoding="async"><figcaption class="as-meta" aria-hidden="true"><b>20260427_201148.jpg</b><small>Phone gallery</small><i>image</i></figcaption><span class="stamp"></span></figure>
@@ -214,6 +229,7 @@
           <li>Hold, then swipe up to drop a photo into one of up to four Keep Collections.</li>
           <li>Link a Collection to a phone album and it appears in your Gallery app, like any other album.</li>
           <li>Link all of your Collections, or only the ones you choose.</li>
+          <li>Your Keep Collections sit above every photo while you sift, so one tap files it.</li>
         </ul>
       </div>
       <div class="albums" role="img" aria-label="Example Collections screen: Holidays, Garden, Days out and Evenings, each shown as a phone album.">
@@ -374,35 +390,55 @@
 
   <!-- Pricing -->
   <section id="pricing" aria-labelledby="pricing-title">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 id="pricing-title">Free to start. One payment if you want more.</h2>
-        <p>Try everything for free. If Siftory earns a place on your phone, unlock it for good.</p>
+    <div class="wrap pricing">
+      <div class="pricing-main">
+        <div class="section-head">
+          <h2 id="pricing-title">Free to start. One payment if you want more.</h2>
+          <p>Try everything for free. If Siftory earns a place on your phone, unlock it for good.</p>
+        </div>
+        <div class="plans">
+          <article class="plan" aria-labelledby="plan-free">
+            <h3 id="plan-free">Free</h3>
+            <p class="price">£0</p>
+            <ul class="ticks">
+              <li>100 decisions to get you started</li>
+              <li>30 more decisions every month</li>
+              <li>Up to 5 Collections</li>
+              <li>No account, no ads, nothing uploaded</li>
+            </ul>
+            <p class="plan-foot">Free on Google Play from launch.</p>
+          </article>
+          <article class="plan plan-life" aria-labelledby="plan-life">
+            <h3 id="plan-life">Siftory Lifetime</h3>
+            <p class="price">£4.99 <small>one-off payment</small></p>
+            <ul class="ticks">
+              <li>Unlimited sifting</li>
+              <li>Unlimited Collections</li>
+              <li>Pay once and keep it. No renewals.</li>
+            </ul>
+            <p class="plan-foot">Coming with launch on Google Play.</p>
+          </article>
+        </div>
+        <p class="plans-note">No subscription, no weekly plans and no free trial that turns into a bill.</p>
       </div>
-      <div class="plans">
-        <article class="plan" aria-labelledby="plan-free">
-          <h3 id="plan-free">Free</h3>
-          <p class="price">£0</p>
-          <ul class="ticks">
-            <li>100 decisions to get you started</li>
-            <li>30 more decisions every month</li>
-            <li>Up to 5 Collections</li>
-            <li>No account, no ads, nothing uploaded</li>
-          </ul>
-          <p class="plan-foot">Free when Siftory launches on Google Play.</p>
-        </article>
-        <article class="plan plan-life" aria-labelledby="plan-life">
-          <h3 id="plan-life">Siftory Lifetime</h3>
-          <p class="price">£4.99 <small>one-off payment</small></p>
-          <ul class="ticks">
-            <li>Unlimited sifting</li>
-            <li>Unlimited Collections</li>
-            <li>Pay once and keep it. No renewals.</li>
-          </ul>
-          <p class="plan-foot">Coming with launch on Google Play.</p>
-        </article>
+      <div class="phone app-phone life-phone" role="img" aria-label="The Siftory Lifetime screen in the app: unlimited sifting and unlimited Collections for one payment of £4.99, with no adverts and no subscription, and a button to unlock Lifetime.">
+        <div class="app life-app" aria-hidden="true">
+          <div class="as-head"><span class="as-logo"></span><b class="as-brand">Siftory</b><span class="as-plan">FREE PLAN</span><span class="as-cog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span></div>
+          <div class="lf-body">
+            <div class="lf-heading"><span class="lf-eyebrow">LIFETIME</span><b class="lf-title">Siftory Lifetime</b><span class="lf-intro">A calm one-time unlock for Siftory.</span></div>
+            <div class="lf-offer">
+              <span class="lf-eyebrow">SIFTORY LIFETIME</span>
+              <b class="lf-offer-title">Unlimited sifting.<br>Unlimited Collections.</b>
+              <span class="lf-copy">One payment. No adverts. No subscription.</span>
+              <span class="lf-price"><b>£4.99</b>once</span>
+              <ul><li><i>✓</i>Unlimited sifting</li><li><i>✓</i>Unlimited Collections</li><li><i>✓</i>One payment. No adverts.</li></ul>
+              <span class="lf-buy">Unlock Lifetime — £4.99</span>
+            </div>
+            <div class="lf-free"><b>Your Free plan remains available</b><span>Keep using Siftory with the free allowances for as long as you like.</span></div>
+          </div>
+          <div class="as-nav"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20h-5.5v-5.5h-5V20H4z"/></svg>Home</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-7.5a1.5 1.5 0 0 1 3 0V16"/><path d="M12 15.5v-2a1.5 1.5 0 0 1 3 0v2.5"/><path d="M15 16v-1a1.5 1.5 0 0 1 3 0v2.5c0 2-1.5 3.5-3.5 3.5"/><path d="M9 16.5 7.6 15a1.5 1.5 0 0 0-2.2 2l2.6 3"/><path d="M6 4.5A6 6 0 0 0 4 9m1.2-1.8L4 9 2.4 7.8"/><path d="M14 3.5a6 6 0 0 1 4.6 4.3m-.6-2 .6 2-2 .3"/></svg>Sift</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 3h13v13H7z"/><path d="M4 7v13h13"/><path d="M12 3v6l2-1.5L16 9V3" fill="currentColor"/></svg>Collections</span></div>
+        </div>
       </div>
-      <p class="plans-note">No subscription, no weekly plans and no free trial that turns into a bill.</p>
     </div>
   </section>
 
