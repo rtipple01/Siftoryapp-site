@@ -1267,3 +1267,9 @@ button.as-tab.v.l.tab-btn:active { transform: rotate(180deg) scale(.96); }
   .tst-nav { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
   .tst-nav a { display: block; text-align: center; padding-inline: .4rem; }
 }
+
+.site-footer .footer-social { display: flex; gap: .75rem; margin-top: 1rem; }
+.site-footer .footer-social a { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); color: #fff; transition: background .2s, border-color .2s, color .2s; }
+.site-footer .footer-social a:hover { background: rgba(255,255,255,.1); border-color: var(--gold-soft); color: var(--gold-soft); }
+.site-footer .footer-social svg { width: 20px; height: 20px; }
+@media (min-width: 760px) { .site-footer .footer-social { justify-content: flex-end; } }
