@@ -1,0 +1,14 @@
+{
+  "android": {
+    "release": 3,
+    "version": "1.0.0",
+    "date": "17 Nov 2026",
+    "notes": ["Settings now save properly.", "Photo access card in Settings."]
+  },
+  "ios": {
+    "release": 3,
+    "version": "1.0.0",
+    "date": "17 Nov 2026",
+    "notes": ["First iPhone test build."]
+  }
+}
