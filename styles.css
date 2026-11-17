@@ -1273,3 +1273,14 @@ button.as-tab.v.l.tab-btn:active { transform: rotate(180deg) scale(.96); }
 .site-footer .footer-social a:hover { background: rgba(255,255,255,.1); border-color: var(--gold-soft); color: var(--gold-soft); }
 .site-footer .footer-social svg { width: 20px; height: 20px; }
 @media (min-width: 760px) { .site-footer .footer-social { justify-content: flex-end; } }
+
+/* Testers: sign-up cards (two equal columns) */
+.tst-pair { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 760px) { .tst-pair { grid-template-columns: 1fr 1fr; } }
+.tst-card { display: flex; flex-direction: column; background: #fff; border-radius: 22px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(16,35,28,.08); }
+.tst-card h3 { margin: .5rem 0 .75rem; }
+.tst-card ol { margin: 0 0 1.25rem 1.1rem; padding: 0; flex: 1; }
+.tst-card ol li { margin-bottom: .45rem; }
+.tst-os { align-self: flex-start; background: var(--gold-soft); color: var(--ink); font-weight: 700; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 999px; }
+.tst-actions { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: .75rem; }
+.tst-actions .btn { text-align: center; justify-content: center; }
