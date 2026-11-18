@@ -1,14 +1,65 @@
 {
   "android": {
-    "release": 3,
+    "release": 4,
     "version": "1.0.0",
     "date": "17 Nov 2026",
-    "notes": ["Settings now save properly.", "Photo access card in Settings."]
+    "notes": [
+      "Link several phone albums at once, with Select all.",
+      "First start offers to bring in your existing albums.",
+      "A banner tells you when a newer version is ready."
+    ]
   },
   "ios": {
-    "release": 3,
+    "release": 4,
     "version": "1.0.0",
     "date": "17 Nov 2026",
-    "notes": ["First iPhone test build."]
-  }
+    "notes": [
+      "Link several phone albums at once, with Select all.",
+      "First start offers to bring in your existing albums.",
+      "A banner tells you when a newer version is ready."
+    ]
+  },
+  "next": {
+    "version": "1.0.5",
+    "notes": [
+      "Suggest an idea: send us ideas straight from Settings.",
+      "What’s new: this page, linked from Settings.",
+      "Proper version numbers, plus “You’re up to date” in Settings.",
+      "The Settings cog now sits centred in its circle."
+    ]
+  },
+  "history": [
+    {
+      "release": 4,
+      "version": "1.0.0",
+      "date": "17 November 2026",
+      "platforms": ["Android", "iPhone"],
+      "notes": [
+        "Link several phone albums at once: tick the ones you want, or use Select all and untick the rest.",
+        "When you first open Siftory, it offers to bring in the albums you already have.",
+        "A banner now tells testers when a newer version is ready, with a summary of what changed."
+      ]
+    },
+    {
+      "release": 3,
+      "version": "1.0.0",
+      "date": "17 November 2026",
+      "platforms": ["Android", "iPhone"],
+      "notes": [
+        "Your choices in Settings are now saved properly.",
+        "New Photo access card in Settings, so you can see and change what Siftory can read.",
+        "Media Roll tidied up: clearer title, simpler Tabs switch and better placed video controls."
+      ]
+    },
+    {
+      "release": 2,
+      "version": "1.0.0",
+      "date": "16 November 2026",
+      "platforms": ["Android", "iPhone"],
+      "notes": [
+        "First test release on Google Play.",
+        "First iPhone test build on TestFlight."
+      ]
+    }
+  ]
 }

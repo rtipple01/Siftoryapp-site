@@ -1284,3 +1284,19 @@ button.as-tab.v.l.tab-btn:active { transform: rotate(180deg) scale(.96); }
 .tst-os { align-self: flex-start; background: var(--gold-soft); color: var(--ink); font-weight: 700; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 999px; }
 .tst-actions { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: .75rem; }
 .tst-actions .btn { text-align: center; justify-content: center; }
+
+/* What's new (release log), built from app-release.json */
+.rel-list { display: grid; gap: 1.25rem; max-width: 760px; margin: 0 0 3rem; padding: 0; list-style: none; }
+.rel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem 1.75rem; }
+.rel-next { background: var(--tint); border-style: dashed; box-shadow: none; }
+.rel-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1rem; margin-bottom: .75rem; }
+.rel-head h2 { margin: 0; font-size: 1.35rem; }
+.rel-meta { color: var(--muted); font-size: .95rem; }
+.rel-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .75rem; }
+.rel-tag { background: var(--pale); color: var(--deep); font-weight: 700; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; padding: .25rem .65rem; border-radius: 999px; }
+.rel-tag-next { background: var(--gold-soft); color: var(--ink); }
+.rel ul { margin: 0; padding-left: 1.2rem; }
+.rel li { margin-bottom: .4rem; }
+.rel-ideas { max-width: 760px; background: var(--deep); color: #fff; border-radius: var(--radius); padding: 1.5rem 1.75rem; margin-bottom: 3rem; }
+.rel-ideas h2 { color: #fff; margin-top: 0; }
+.rel-ideas p { color: #E4EFE9; }
