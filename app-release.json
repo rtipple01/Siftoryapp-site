@@ -1,12 +1,12 @@
 {
   "android": {
-    "release": 4,
-    "version": "1.0.0",
-    "date": "17 Nov 2026",
+    "release": 5,
+    "version": "1.0.5",
+    "date": "18 Nov 2026",
     "notes": [
-      "Link several phone albums at once, with Select all.",
-      "First start offers to bring in your existing albums.",
-      "A banner tells you when a newer version is ready."
+      "Bring in up to 4 of your own albums on the free plan.",
+      "Suggest an idea straight from the app.",
+      "What’s new, and “You’re up to date”, in Settings."
     ]
   },
   "ios": {
@@ -19,19 +19,24 @@
       "A banner tells you when a newer version is ready."
     ]
   },
-  "next": {
-    "version": "1.0.5",
-    "notes": [
-      "New installs start with one Collection (Family), leaving 4 free for your own albums.",
-      "On the free plan, choose which albums to bring in, up to your allowance.",
-      "A slim strip under the header: “Got an idea?”, or “New version available” when there’s an update.",
-      "Suggest an idea: send us ideas straight from the app.",
-      "What’s new: this page, linked from Settings.",
-      "Proper version numbers, plus “You’re up to date” in Settings.",
-      "The Settings cog now sits centred in its circle."
-    ]
-  },
   "history": [
+    {
+      "release": 5,
+      "version": "1.0.5",
+      "date": "18 November 2026",
+      "platforms": [
+        "Android"
+      ],
+      "notes": [
+        "New installs start with one Collection (Family), leaving 4 free for your own albums.",
+        "On the free plan, choose which albums to bring in, up to your allowance.",
+        "A slim strip under the header: “Got an idea?”, or “New version available” when there’s an update.",
+        "Suggest an idea: send us ideas straight from the app.",
+        "What’s new: this page, linked from Settings.",
+        "Proper version numbers, plus “You’re up to date” in Settings.",
+        "The Settings cog now sits centred in its circle."
+      ]
+    },
     {
       "release": 4,
       "version": "1.0.0",
