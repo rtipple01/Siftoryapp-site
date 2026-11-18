@@ -22,7 +22,10 @@
   "next": {
     "version": "1.0.5",
     "notes": [
-      "Suggest an idea: send us ideas straight from Settings.",
+      "New installs start with one Collection (Family), leaving 4 free for your own albums.",
+      "On the free plan, choose which albums to bring in, up to your allowance.",
+      "A slim strip under the header: “Got an idea?”, or “New version available” when there’s an update.",
+      "Suggest an idea: send us ideas straight from the app.",
       "What’s new: this page, linked from Settings.",
       "Proper version numbers, plus “You’re up to date” in Settings.",
       "The Settings cog now sits centred in its circle."
@@ -33,7 +36,10 @@
       "release": 4,
       "version": "1.0.0",
       "date": "17 November 2026",
-      "platforms": ["Android", "iPhone"],
+      "platforms": [
+        "Android",
+        "iPhone"
+      ],
       "notes": [
         "Link several phone albums at once: tick the ones you want, or use Select all and untick the rest.",
         "When you first open Siftory, it offers to bring in the albums you already have.",
@@ -44,7 +50,10 @@
       "release": 3,
       "version": "1.0.0",
       "date": "17 November 2026",
-      "platforms": ["Android", "iPhone"],
+      "platforms": [
+        "Android",
+        "iPhone"
+      ],
       "notes": [
         "Your choices in Settings are now saved properly.",
         "New Photo access card in Settings, so you can see and change what Siftory can read.",
@@ -55,7 +64,10 @@
       "release": 2,
       "version": "1.0.0",
       "date": "16 November 2026",
-      "platforms": ["Android", "iPhone"],
+      "platforms": [
+        "Android",
+        "iPhone"
+      ],
       "notes": [
         "First test release on Google Play.",
         "First iPhone test build on TestFlight."
