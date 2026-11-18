@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://siftoryapp.com/assets/feature-graphic.png">
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="styles.css?v=34">
+<link rel="stylesheet" href="styles.css?v=35">
 <script src="home.js?v=14" defer></script>
 </head>
 <body class="home">
@@ -30,15 +30,21 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Siftory home"><img src="assets/icon-192.png" alt="" width="36" height="36">Siftory</a>
-    <nav class="site-nav" aria-label="Main">
+    <a class="header-cta" href="testers.html#signup">Join the beta</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-label">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul>
-        <li class="nav-optional"><a href="index.html#how">How it works</a></li>
-        <li class="nav-optional"><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="whats-new.html">What’s new</a></li>
         <li><a href="support.html">Support</a></li>
         <li><a href="privacy.html">Privacy</a></li>
-        <li class="nav-cta nav-wide"><a href="index.html#beta">Join the beta</a></li>
+        <li class="nav-cta"><a href="testers.html#signup">Join the beta</a></li>
       </ul>
     </nav>
+    <script>(function(){var h=document.currentScript.closest('.site-header'),b=h.querySelector('.nav-toggle');b.addEventListener('click',function(){var o=h.classList.toggle('nav-open');b.setAttribute('aria-expanded',o);});h.querySelectorAll('.site-nav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('nav-open');b.setAttribute('aria-expanded','false');});});})();</script>
   </div>
 </header>
 
@@ -453,8 +459,8 @@
         </div>
         <div class="test">
           <h3>Now in closed testing</h3>
-          <p>Siftory is being tested on real phones ahead of its Google Play launch. Want to try it early? Join the beta and we’ll send you an invite.</p>
-          <a class="btn btn-play" href="mailto:info@siftoryapp.com?subject=Siftory%20beta"><span><strong>Join the beta</strong></span></a>
+          <p>Siftory is being tested on real Android phones and iPhones ahead of launch. Want to try it early? Join the beta: it only takes a minute.</p>
+          <a class="btn btn-play" href="testers.html#signup"><span><strong>Join the beta</strong></span></a>
         </div>
       </div>
     </div>
@@ -510,9 +516,9 @@
         <li data-dir="right">→ Favourite</li>
       </ul>
       <h2 id="cta-title">Start with last month’s photos</h2>
-      <p>A few minutes is enough to see the difference. Siftory is coming soon to Google Play, and you can try it now in the beta.</p>
+      <p>A few minutes is enough to see the difference. Siftory is coming soon to Google Play and the App Store, and you can try it now in the beta.</p>
       <div class="hero-actions">
-        <a class="btn btn-light" href="mailto:info@siftoryapp.com?subject=Siftory%20beta">Join the beta</a>
+        <a class="btn btn-light" href="testers.html#signup">Join the beta</a>
         <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="support.html">Read the guide</a>
       </div>
     </div>
