@@ -1331,3 +1331,26 @@ button.as-tab.v.l.tab-btn:active { transform: rotate(180deg) scale(.96); }
 .rel-ideas { max-width: 760px; background: var(--deep); color: #fff; border-radius: var(--radius); padding: 1.5rem 1.75rem; margin-bottom: 3rem; }
 .rel-ideas h2 { color: #fff; margin-top: 0; }
 .rel-ideas p { color: #E4EFE9; }
+
+/* Tester sign-up: numbered steps, each with its own full-width button */
+.tst-steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 1rem; flex: 1; }
+.tst-card ol.tst-steps { margin: 0; }
+.tst-steps > li {
+  counter-increment: step; position: relative; margin: 0;
+  padding: 1rem; border-radius: 16px; background: var(--pale);
+  display: flex; flex-direction: column; gap: .5rem;
+}
+.tst-steps > li::before {
+  content: counter(step); position: absolute; left: 1rem; top: 1rem;
+  width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center;
+  background: var(--deep); color: #fff; font-weight: 900; font-size: .95rem;
+}
+.tst-steps h4 { margin: 0; padding-left: 2.4rem; min-height: 1.75rem; display: flex; align-items: center; font-size: 1.05rem; }
+@media (max-width: 520px) { .tst-card { padding: 1.1rem; } .tst-steps > li { padding: .9rem; } .tst-steps > li::before { left: .9rem; top: .9rem; } }
+.tst-steps p { margin: 0; font-size: .95rem; flex: 1; }
+.tst-steps .btn { width: 100%; min-height: 48px; margin-top: .25rem; }
+/* Line the two cards' steps up row by row on wide screens. */
+@media (min-width: 760px) {
+  .tst-pair:has(.tst-steps) { grid-template-rows: auto; }
+  .tst-steps { grid-template-rows: repeat(3, 1fr); }
+}
