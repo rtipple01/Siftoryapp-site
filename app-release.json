@@ -10,13 +10,13 @@
     ]
   },
   "ios": {
-    "release": 4,
-    "version": "1.0.0",
-    "date": "17 Nov 2026",
+    "release": 5,
+    "version": "1.0.5",
+    "date": "18 Nov 2026",
     "notes": [
-      "Link several phone albums at once, with Select all.",
-      "First start offers to bring in your existing albums.",
-      "A banner tells you when a newer version is ready."
+      "Bring in up to 4 of your own albums on the free plan.",
+      "Suggest an idea straight from the app.",
+      "What’s new, and “You’re up to date”, in Settings."
     ]
   },
   "history": [
@@ -25,7 +25,8 @@
       "version": "1.0.5",
       "date": "18 November 2026",
       "platforms": [
-        "Android"
+        "Android",
+        "iPhone"
       ],
       "notes": [
         "New installs start with one Collection (Family), leaving 4 free for your own albums.",
