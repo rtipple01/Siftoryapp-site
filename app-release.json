@@ -1,12 +1,12 @@
 {
   "android": {
-    "release": 5,
-    "version": "1.0.5",
-    "date": "18 Nov 2026",
+    "release": 6,
+    "version": "1.0.6",
+    "date": "23 Nov 2026",
     "notes": [
-      "Bring in up to 4 of your own albums on the free plan.",
-      "Suggest an idea straight from the app.",
-      "What’s new, and “You’re up to date”, in Settings."
+      "Collections now show A to Z, including new ones straight away.",
+      "Fixed: “Apply to phone albums” could keep moving photos back into Camera, so the list never cleared.",
+      "Smaller download, and a wider layout on tablets and foldables."
     ]
   },
   "ios": {
@@ -20,6 +20,19 @@
     ]
   },
   "history": [
+    {
+      "release": 6,
+      "version": "1.0.6",
+      "date": "23 November 2026",
+      "platforms": [
+        "Android"
+      ],
+      "notes": [
+        "Collections now show A to Z, including new ones straight away.",
+        "Fixed: “Apply to phone albums” could keep moving photos back into Camera, so the list never cleared.",
+        "Smaller download, and a wider layout on tablets and foldables."
+      ]
+    },
     {
       "release": 5,
       "version": "1.0.5",
