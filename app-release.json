@@ -1,12 +1,10 @@
 {
   "android": {
-    "release": 6,
-    "version": "1.0.6",
-    "date": "23 Nov 2026",
+    "release": 7,
+    "version": "1.0.7",
+    "date": "26 Nov 2026",
     "notes": [
-      "Collections now show A to Z, including new ones straight away.",
-      "Fixed: “Apply to phone albums” could keep moving photos back into Camera, so the list never cleared.",
-      "Smaller download, and a wider layout on tablets and foldables."
+      "Fixed: adding target Collections to a Sift in progress now carries on that Sift with the new ones, instead of going back to the old setup."
     ]
   },
   "ios": {
@@ -20,6 +18,17 @@
     ]
   },
   "history": [
+    {
+      "release": 7,
+      "version": "1.0.7",
+      "date": "26 November 2026",
+      "platforms": [
+        "Android"
+      ],
+      "notes": [
+        "Fixed: adding target Collections to a Sift in progress now carries on that Sift with the new ones, instead of going back to the old setup."
+      ]
+    },
     {
       "release": 6,
       "version": "1.0.6",
